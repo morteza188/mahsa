@@ -20,3 +20,10 @@ class InCome(models.Model):
     user = models.ForeignKey(User)
     def __unicode__(self):
         return self.text + "    {}".format(self.amount)
+
+class Note(models.Model):
+    text = models.CharField(max_length=255)
+    date = models.DateTimeField()
+    user = models.ForeignKey(User)
+    def __unicode__(self):
+        return self.text + "    {}".format(self.text)
